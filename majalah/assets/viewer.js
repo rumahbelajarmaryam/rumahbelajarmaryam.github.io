@@ -9,7 +9,7 @@
     var d = document.createElement('div');
     d.className = 'page';
     var im = new Image();
-    im.src = 'p/' + (i < 10 ? '0' : '') + i + '.webp';
+    im.src = 'p/' + (i < 10 ? '0' : '') + i + '.webp?v=2';
     im.alt = 'Halaman ' + i;
     im.draggable = false;
     d.appendChild(im);
