@@ -1,0 +1,44 @@
+:root{--teal:#23827b;--navy:#00516b;--cream:#fdf3d8;--ink:#102042}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{font-family:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:linear-gradient(180deg,#fff7e0 0%,#e9f4f2 100%);
+  -webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+h1,h2,.brand{font-family:"Fredoka","Nunito",system-ui,sans-serif}
+img{-webkit-user-drag:none;user-drag:none;pointer-events:none}
+
+/* ---------- daftar edisi ---------- */
+.wrap{max-width:960px;margin:0 auto;padding:28px 20px 40px}
+.top{text-align:center;margin-bottom:24px}
+.top h1{margin:0;font-size:2.4rem;color:var(--teal)}
+.top p{margin:6px 0 0;color:var(--navy);font-size:1.1rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.card{display:block;text-decoration:none;color:inherit;background:#fff;border-radius:18px;padding:14px;box-shadow:0 6px 18px rgba(0,81,107,.15);transition:transform .15s}
+.card:hover{transform:translateY(-3px)}
+.card img{width:100%;display:block;border-radius:10px;aspect-ratio:1/1.414;object-fit:cover;background:#eee}
+.card h2{margin:12px 4px 2px;font-size:1.35rem;color:var(--navy)}
+.card span{margin:0 4px 4px;display:block;color:#4a5b6e}
+.note{margin-top:28px;font-size:.95rem;color:#4a5b6e;text-align:center;line-height:1.5}
+
+/* ---------- viewer ---------- */
+.viewer{display:flex;flex-direction:column;height:100vh;height:100dvh}
+.bar{display:flex;align-items:center;gap:12px;padding:8px 14px;background:var(--navy);color:#fff}
+.bar a{color:#fff;text-decoration:none;font-weight:700;white-space:nowrap}
+.bar .title{flex:1;text-align:center;font-family:"Fredoka",sans-serif;font-size:1.05rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar button{background:rgba(255,255,255,.18);border:0;color:#fff;border-radius:10px;padding:6px 12px;font:inherit;font-weight:700;cursor:pointer}
+.stage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:10px;position:relative;overflow:hidden;transition:filter .2s}
+.stage.veil{filter:blur(28px)}
+#book{margin:0 auto}
+.page{background:#fff;overflow:hidden}
+.page img{width:100%;height:100%;display:block}
+.mark{position:absolute;inset:0;pointer-events:none;opacity:.07;z-index:5;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='260' height='160'><text x='10' y='90' transform='rotate(-24 130 80)' font-family='Arial' font-size='18' fill='%2300516b'>Rumah Belajar Maryam</text></svg>")}
+.ctrl{display:flex;align-items:center;gap:10px;padding:10px 14px;background:#fff;box-shadow:0 -2px 10px rgba(0,0,0,.08)}
+.ctrl button{background:var(--teal);color:#fff;border:0;border-radius:12px;padding:10px 18px;font:inherit;font-weight:800;font-size:1rem;cursor:pointer}
+.ctrl button:disabled{opacity:.4}
+.ctrl input[type=range]{flex:1;accent-color:var(--teal)}
+.ctrl .count{min-width:7.5em;text-align:center;font-weight:800;color:var(--navy)}
+.legal{font-size:.8rem;text-align:center;color:#51606f;padding:4px 10px 8px;background:#fff}
+@media(max-width:560px){.bar .title{display:none}.ctrl button{padding:10px 14px}.ctrl .count{min-width:6em}}
+
+/* ---------- cetak diblokir ---------- */
+@media print{body *{display:none!important}body::after{content:"Majalah ini hanya untuk dibaca di layar.";display:block;font-size:20px;padding:40px}}
